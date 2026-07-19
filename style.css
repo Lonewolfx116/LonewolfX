@@ -266,3 +266,22 @@ section p {
 
 
 }
+.hero-logo {
+    width: 320px;
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    filter: drop-shadow(0 0 15px rgba(255,255,255,0.2));
+    transition: transform 0.3s ease;
+}
+
+.hero-logo:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .hero-logo {
+        width: 220px;
+    }
+}
