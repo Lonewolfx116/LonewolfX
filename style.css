@@ -39,9 +39,20 @@ body {
 
     font-size:70px;
 
-    letter-spacing:10px;
+    letter-spacing:12px;
 
-    animation: glow 2s infinite alternate;
+    font-weight:900;
+
+    text-transform:uppercase;
+
+    color:white;
+
+    text-shadow:
+    0 0 10px white,
+    0 0 20px #888,
+    0 0 40px #444;
+
+    animation:wolfPulse 3s infinite alternate;
 
 }
 
@@ -167,17 +178,21 @@ footer {
 
 
 
-@keyframes glow {
+@keyframes wolfPulse {
 
     from {
 
-        text-shadow:0 0 5px white;
+        transform:scale(1);
+
+        opacity:0.85;
 
     }
 
     to {
 
-        text-shadow:0 0 25px white;
+        transform:scale(1.05);
+
+        opacity:1;
 
     }
 
