@@ -42,5 +42,54 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     console.log(greeting + " to LoneWolfX");
+// ===== Background Music =====
 
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
+
+music.volume = 0;
+
+// Start music after first tap
+document.addEventListener("click", function startMusic() {
+
+    music.play();
+
+    let volume = 0;
+
+    const fade = setInterval(() => {
+
+        if (volume < 1) {
+
+            volume += 0.05;
+            music.volume = volume;
+
+        } else {
+
+            clearInterval(fade);
+
+        }
+
+    }, 200);
+
+    document.removeEventListener("click", startMusic);
+
+}, { once: true });
+
+// Speaker button
+
+musicBtn.addEventListener("click", () => {
+
+    if (music.paused) {
+
+        music.play();
+        musicBtn.textContent = "🔊";
+
+    } else {
+
+        music.pause();
+        musicBtn.textContent = "🔇";
+
+    }
+
+});
 });
