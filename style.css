@@ -255,3 +255,25 @@ font-size:20px;
 }
 
 }
+
+/* ===== Icon Colors ===== */
+
+.fa-phone {
+    color: #d1d5db;
+}
+
+.fa-whatsapp {
+    color: #25D366;
+}
+
+.fa-envelope {
+    color: #ffffff;
+}
+
+.fa-github {
+    color: #ffffff;
+}
+
+.fa-facebook {
+    color: #1877F2;
+}
