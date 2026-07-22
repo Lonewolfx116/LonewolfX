@@ -92,4 +92,15 @@ musicBtn.addEventListener("click", () => {
     }
 
 });
+   // Try to autoplay music
+music.play().then(() => {
+
+    musicBtn.innerHTML =
+    '<i class="fa-solid fa-volume-high"></i> Pause Music';
+
+}).catch(() => {
+
+    console.log("Autoplay blocked by browser.");
+
+}); 
 });
