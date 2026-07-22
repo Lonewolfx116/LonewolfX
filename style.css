@@ -18,6 +18,8 @@ overflow-x:hidden;
 
 
 .hero{
+    position: relative;
+overflow: hidden;
 
 height:100vh;
 
