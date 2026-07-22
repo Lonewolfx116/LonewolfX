@@ -433,3 +433,58 @@ font-size:20px;
         opacity:0;
     }
 }
+/* Fog */
+
+.fog{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:0;
+    background:
+        radial-gradient(circle at 30% 40%, rgba(255,255,255,.08), transparent 40%),
+        radial-gradient(circle at 70% 70%, rgba(255,255,255,.06), transparent 45%);
+    filter:blur(60px);
+    animation:fogMove 25s linear infinite alternate;
+}
+
+@keyframes fogMove{
+    from{
+        transform:translateX(-80px);
+    }
+    to{
+        transform:translateX(80px);
+    }
+}
+
+/* Embers */
+
+.embers{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:1;
+    background-image:
+        radial-gradient(circle,#ff3b00 2px,transparent 3px),
+        radial-gradient(circle,#ffae00 1.5px,transparent 3px),
+        radial-gradient(circle,#ff2200 1px,transparent 2px);
+    background-size:220px 220px;
+    animation:embersMove 18s linear infinite;
+    opacity:.55;
+}
+
+@keyframes embersMove{
+    from{
+        background-position:0 100%;
+    }
+    to{
+        background-position:150px -300px;
+    }
+}
+
+/* Keep card above effects */
+
+.hero,
+.card{
+    position:relative;
+    z-index:5;
+}
