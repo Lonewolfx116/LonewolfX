@@ -102,5 +102,28 @@ music.play().then(() => {
 
     console.log("Autoplay blocked by browser.");
 
-}); 
+});
+   // ===== Floating Embers =====
+
+const particles = document.getElementById("particles");
+
+for (let i = 0; i < 40; i++) {
+
+    const p = document.createElement("div");
+
+    p.className = "particle";
+
+    p.style.left = Math.random() * 100 + "%";
+
+    p.style.animationDuration = (6 + Math.random() * 8) + "s";
+
+    p.style.animationDelay = (Math.random() * 8) + "s";
+
+    p.style.opacity = Math.random();
+
+    p.style.transform = "scale(" + (0.5 + Math.random() * 2) + ")";
+
+    particles.appendChild(p);
+
+} 
 });
